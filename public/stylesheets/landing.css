@@ -1,0 +1,93 @@
+html, body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.landing{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.topbar{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: #065388;
+}
+
+.landingLogo{
+    flex-grow: 4;
+    text-align: center;
+    padding: 0;
+}
+
+.logoButton{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.topbarButton{
+    flex-grow: 1;
+    padding: 20px 30px 20px 30px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    transition: flex-grow 0.3s ease-in-out;
+}
+
+.topbarButton:hover{
+    flex-grow: 2;
+    background-color: rgba(0,0,0,0.36);
+    transition: background-color 0.2s ease-in-out, flex-grow 0.3s ease-in-out;
+}
+
+.footer{
+    flex-grow: 5;
+}
+
+.landingContent{
+    flex-grow: 5;
+
+    display: flex;
+    padding: 60px;
+    background-color: #ececec;
+    color: rgba(0,0,0,0.9);
+}
+
+.hero{
+    flex-grow: 3;
+    padding: 150px 60px 60px 60px;
+    font-size: 32px;
+}
+
+#heroInvest, #heroGreener{
+    font-size: 60px;
+    color: rgba(0,0,0,0.9);
+    transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#heroInvest:hover{
+    font-size: 70px;
+    color: #770f85;
+    transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#heroGreener:hover{
+    font-size: 80px;
+    color: #35850f;
+    transition: font-size 0.2s ease-in-out, color 0.2s ease-in-out;
+}
