@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title><%= title %></title>
+        <title>Settings</title>
         <link rel='stylesheet' href='/stylesheets/app.css' />
     </head>
     <body>
@@ -10,15 +10,19 @@
                 <div class="appLogo">
 
                 </div>
+                <button class="sidebarButton" id="name" type="button"></button>
                 <button class="sidebarButton" type="button" onclick="location.href='/portfolio'">Portfolio</button>
                 <button class="sidebarButton" type="button" onclick="location.href='/explore'">Explore</button>
                 <button class="sidebarButton" type="button" onclick="location.href='/settings'">Settings</button>
                 <div class="footer"></div>
             </div>
             <div class="appContent">
-                <h1><%= title %></h1>
+                <h1>Settings</h1>
                 <p>This is the settings page</p>
             </div>
         </div>
+        <script>
+            window.onload = getCookie
+        </script>
     </body>
 </html>

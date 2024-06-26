@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <link rel='stylesheet' href='/stylesheets/landing.css' />
+    </head>
+    <body>
+        <div class="login">
+            <div class="loginContent">
+
+            </div>
+            <div class="loginForm">
+                <h1>Hello there</h1>
+                <p>Please enter the following details to create your account</p>
+                <form action="/signup" method="POST">
+                    <h3 class="loginFormTitle">Username</h3>
+                    <input class="loginButton" type="text" id="username" name="username" placeholder="eg.BigManDavis" required>
+                    <h3 class="loginFormTitle">Password</h3>
+                    <input class="loginButton" type="password" id="password" name="password" placeholder="eg.str0ngpas5w0rd" required>
+                    <button class="loginButton" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
