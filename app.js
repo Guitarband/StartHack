@@ -4,7 +4,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://preetishchoudhary:Nf8qAoPiEezmbDrB@starthackcluster.4tsfl13.mongodb.net/?appName=StartHackCluster";
+const uri = process.env.MONGODB_URI;
 
 let landingRouter = require('./routes/landing');
 let aboutRouter = require('./routes/about');
