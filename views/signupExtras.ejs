@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <link rel='stylesheet' href='/stylesheets/landing.css' />
+    </head>
+    <body>
+        <div class="login">
+            <div class="loginForm">
+                <h1>Sign up</h1>
+                <p>Please enter the remaining details to complete registration</p>
+                <form class="form" action="/signupComplete" method="POST">
+                    <div>
+                        <h3 class="loginFormTitle">Email</h3>
+                        <input class="loginButton" type="email" id="email" name="email" placeholder="eg.BigManDavis@gmail.com" value="<%= email %>" required>
+                    </div>
+                    <div>
+                        <h3 class="loginFormTitle">Date of Birth</h3>
+                        <input class="loginButton" type="date" id="dob" name="dateob" placeholder="eg.17/11/1984" required>
+                    </div>
+                    <div>
+                        <h3 class="loginFormTitle">First Name</h3>
+                        <input class="loginButton" type="text" id="fname" name="fname" placeholder="eg.Davis" required>
+                    </div>
+                    <div>
+                        <h3 class="loginFormTitle">Last Name</h3>
+                        <input class="loginButton" type="text" id="lname" name="lname" placeholder="eg.Stretcher" required>
+                    </div>
+                    <div>
+                        <h3 class="loginFormTitle">Username</h3>
+                        <input class="loginButton" type="text" id="username" name="username" placeholder="eg.BigManDavis" required>
+                    </div>
+                    <div>
+                        <h3 class="loginFormTitle">Password</h3>
+                        <input class="loginButton" type="password" id="password" name="password" placeholder="eg.str0ngpas5w0rd" required>
+                    </div>
+                    <button class="loginButton" id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

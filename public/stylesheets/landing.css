@@ -108,10 +108,16 @@ html, body {
 
 .loginForm{
     flex-grow: 2;
-    padding: 10%;
+    padding: 5% 10% 5% 10%;
     font-size: 24px;
     background-color: #114462;
     color: white;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
 }
 
 .loginButton{
@@ -135,6 +141,10 @@ html, body {
     margin: 0;
     font-size: 16px;
     font-weight: bold;
+}
+
+#submit{
+    grid-column: span 2;
 }
 
 #link{

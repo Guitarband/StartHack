@@ -3,6 +3,7 @@
     <head>
         <title>Settings</title>
         <link rel='stylesheet' href='/stylesheets/app.css' />
+        <script src="/javascripts/script.js"></script>
     </head>
     <body>
         <div class="app">
@@ -10,7 +11,7 @@
                 <div class="appLogo">
 
                 </div>
-                <button class="sidebarButton" id="name" type="button"></button>
+                <button class="sidebarButton" id="name" type="button" onclick="location.href='/profile'">Name</button>
                 <button class="sidebarButton" type="button" onclick="location.href='/portfolio'">Portfolio</button>
                 <button class="sidebarButton" type="button" onclick="location.href='/explore'">Explore</button>
                 <button class="sidebarButton" type="button" onclick="location.href='/settings'">Settings</button>
@@ -22,7 +23,9 @@
             </div>
         </div>
         <script>
-            window.onload = getCookie
+            getCookie().then(result =>{
+                getUser(result)
+            })
         </script>
     </body>
 </html>

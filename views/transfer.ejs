@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <link rel='stylesheet' href='/stylesheets/landing.css' />
+        <script src="/javascripts/script.js"></script>
+    </head>
+    <body>
+        <div class="login">
+            <div class="loginForm">
+                <h1><%= username %></h1>
+                <form class="form" action="/confirmTransfer" method="POST">
+                    <div>
+                        <h3 class="amount" id="transferText">You must be logged in to transfer money</h3>
+                        <input class="loginButton" id="amountInput" type="hidden" name="amount" required>
+                        <input class="hidden" id="recipientId" type="hidden" name="recipientId" value="<%= recipientId%>" required>
+                        <input class="hidden" id="userId" type="hidden" name="userId" required>
+                    </div>
+                    <button class="loginButton" id="submit" type="submit">Submit</button>
+                </form>
+                <button type="button" id="loginButton" onclick="location.href='/login'">Login</button>
+            </div>
+        </div>
+        <script>
+            window.onload= function () {
+                getCookie().then(value => {
+                    if(value !== 'Cookie not found') {
+                        if(value !== document.getElementById('recipientId').value) {
+                            document.getElementById('transferText').innerText = 'Amount to transfer';
+                            document.getElementById('amountInput').type = 'number';
+                            document.getElementById('userId').value = value;
+                            document.getElementById('loginButton').style.visibility = 'hidden';
+                        }
+                        else{
+                            document.getElementById('transferText').innerText = 'Cannot transfer money to yourself';
+                            document.getElementById('submit').style.visibility = 'hidden';
+                        }
+                    }
+                    else{
+                        document.getElementById('submit').style.visibility = 'hidden';
+                    }
+                })
+            }
+        </script>
+    </body>
+</html>
