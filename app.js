@@ -4,6 +4,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 const QRCode = require('qrcode');
+const cors = require('cors')
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = "mongodb+srv://preetishchoudhary:Nf8qAoPiEezmbDrB@starthackcluster.4tsfl13.mongodb.net/?appName=StartHackCluster";
 
@@ -12,9 +13,10 @@ let app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -44,6 +46,18 @@ const {
   loginRequest,
   signupRequest
 } = require('./routes/clientDataHanler')
+
+//middleware
+/*app.use((req,res,next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  if(req.method === "OPTIONS"){
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
+    return res.status(200).json()
+  }
+  next();
+})
+*/
 
 app.post('/login', async (req, res) => {
   const client = new MongoClient(uri, {
@@ -122,7 +136,7 @@ app.post('/signupComplete', async (req, res) => {
       money: 0,
       investments: {}
     })
-    res.cookie('userData', `${uid.toString()}`);
+    res.cookie('userData', `${uid.insertedId.toString()}`);
     res.redirect(`/portfolio`)
   } catch (error){
     console.log('An error occurred');
@@ -254,7 +268,8 @@ app.get('/api/v1/accounts/me', async (req,res) => {
     if(!userId){
       return res.status(401).json({error:'Unauthorized'})
     }
-    const userData = await data.findOne({username: userId})
+    const userData = await data.findOne({_id: new ObjectId(userId)})
+    console.log(userData.username)
     if (userData) {
       res.json({
         email:userData.email,
