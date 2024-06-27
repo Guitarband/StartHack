@@ -4,7 +4,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 const QRCode = require('qrcode');
-const { MongoClient, ServerApiVersion , ObjectId} = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = "mongodb+srv://preetishchoudhary:Nf8qAoPiEezmbDrB@starthackcluster.4tsfl13.mongodb.net/?appName=StartHackCluster";
 
 let app = express();
