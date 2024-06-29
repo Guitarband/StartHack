@@ -13,6 +13,9 @@
                     <div>
                         <h3 class="amount" id="transferText">You must be logged in to transfer money</h3>
                         <input class="loginButton" id="amountInput" type="hidden" name="amount" required>
+                        <% if (typeof error !== 'undefined') { %>
+                            <p><%= error%></p>
+                        <% }%>
                         <input class="hidden" id="recipientId" type="hidden" name="recipientId" value="<%= recipientId%>" required>
                         <input class="hidden" id="userId" type="hidden" name="userId" required>
                     </div>

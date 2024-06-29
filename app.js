@@ -45,7 +45,7 @@ app.use('/settings', settingsRouter);
 const {
   loginRequest,
   signupRequest
-} = require('./routes/clientDataHanler')
+} = require('./routes/clientDataHandler')
 
 //middleware
 /*app.use((req,res,next) => {
@@ -171,7 +171,8 @@ app.get('/user', async (req, res) => {
     const userData = await data.findOne({_id: new ObjectId(accountId)})
     if(userData){
       res.json({
-        username:userData.username
+        username:userData.username,
+        money:userData.money
       })
     }
     else{
@@ -223,16 +224,19 @@ app.post('/confirmTransfer', async (req, res) => {
     let newUserAmount = parseInt(userData.money) -  parseInt(amount)
     let newRecipientAmount = parseInt(recipientData.money) + parseInt(amount)
 
+    if(newUserAmount < 0){
+      res.render('transfer',{recipientId: recipientId ,username:recipientData.username, error:'Insufficient funds'})
+    }else {
+      await data.updateOne(
+          {_id: new ObjectId(userId)},
+          {$set: {money: newUserAmount}}
+      )
 
-    await data.updateOne(
-        {_id: new ObjectId(userId)},
-        {$set:{money:newUserAmount}}
-    )
-
-    await data.updateOne(
-        {_id: new ObjectId(recipientId)},
-        {$set:{money:newRecipientAmount}}
-    )
+      await data.updateOne(
+          {_id: new ObjectId(recipientId)},
+          {$set: {money: newRecipientAmount}}
+      )
+    }
   } catch (error){
     console.log('An error occurred');
   } finally {
