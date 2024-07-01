@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Settings</title>
+        <title>Portfolio</title>
         <link rel='stylesheet' href='/stylesheets/app.css' />
         <script src="/javascripts/script.js"></script>
     </head>
@@ -11,15 +11,25 @@
                 <div class="appLogo">
 
                 </div>
-                <button class="sidebarButton" id="name" type="button" onclick="location.href='/profile'">Name</button>
+                <button class="sidebarButton" id="name" type="button" onclick="location.href='/profile'"></button>
                 <button class="sidebarButton" type="button" onclick="location.href='/portfolio'">Portfolio</button>
                 <button class="sidebarButton" type="button" onclick="location.href='/explore'">Explore</button>
                 <button class="sidebarButton" type="button" onclick="location.href='/settings'">Settings</button>
                 <div class="footer"></div>
             </div>
             <div class="appContent">
-                <h1>Settings</h1>
-                <p>This is the settings page</p>
+                <img id="qrcode" />
+                <div id="qrlink"></div>
+                <button onclick="getCookie().then(
+                    async result => await fetch(`/qrcode/${result}`,{
+                        method:'GET',
+                        headers:{
+                            'Authorization':`${window.location.href}`
+                        }
+                    }).then(response => response.json()).then(
+                        data => {
+                            document.getElementById('qrcode').src = data.qrCodeUrl;
+                        }))">Generate Qr Share Code</button>
             </div>
         </div>
         <script>
