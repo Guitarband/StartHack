@@ -31,6 +31,7 @@ const {
   exploreRouter,
   settingsRouter
 } = require('./routes/serverRouters')
+const companyArray = require('./data/companies.json')
 
 app.use('/', landingRouter);
 app.use('/about', aboutRouter);
@@ -46,18 +47,6 @@ const {
   loginRequest,
   signupRequest
 } = require('./routes/clientDataHandler')
-
-//middleware
-/*app.use((req,res,next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-  if(req.method === "OPTIONS"){
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
-    return res.status(200).json()
-  }
-  next();
-})
-*/
 
 app.post('/login', async (req, res) => {
   const client = new MongoClient(uri, {
@@ -256,6 +245,18 @@ app.get('/qrcode/:userId', async (req, res) => {
     res.status(500).send('Error generating QR code');
   }
 });
+
+app.get('/api/v1/company', (req, res) => {
+  const { name } = req.query;
+  if( name === 'all'){
+    res.send(companyArray)
+  }
+  else{
+    if( companyArray.hasOwnProperty(name) ){
+      res.send(companyArray[name])
+    }
+  }
+})
 
 app.get('/api/v1/accounts/me', async (req,res) => {
   const client = new MongoClient(uri, {

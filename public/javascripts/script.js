@@ -22,13 +22,20 @@ function getUser(userId){
     })
 }
 
-function trial(){
-    fetch(`/api/v1/accounts/me`, {
-        method: 'GET',
-        headers:{
-            'Authorization':'Guitarband'
-        }
-    }).then(response => {
+function fetchCompanyData(query){
+    return fetch(`/api/v1/company?name=${query}`).then(response => {
         return response.json()
     })
+}
+
+function populateExplore(elements){
+    for(let key in elements){
+        if(elements.hasOwnProperty(key)) {
+            const mainDiv = document.createElement('div')
+            mainDiv.classList.add('companyCards')
+            const text = document.createTextNode(key)
+            mainDiv.appendChild(text)
+            document.getElementById('exploreGrid').appendChild(mainDiv)
+        }
+    }
 }
