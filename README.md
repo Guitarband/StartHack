@@ -25,7 +25,7 @@ To begin with, clone this repository and navigate to folder. Then right click on
 This project makes use of multiple external modules to ensure it can run effectively. In your terminal, write the code below to install these modules in your environment.
 
 ```bash
-npm i express cookie-parser morgan qrcode cors mongodb ejs debug http-errors
+npm i cookie-parser cors debug ejs express http-errors mongodb morgan qrcode vercel
 ```
 
 ### Starting the server
