@@ -1,3 +1,4 @@
+
 # Welcome to our StartHack Project
 
 Welcome to our starthack repository. This project follows the **Fintech** branch and is an *express.js* application hosted at [Starthack Project.](https://start-hack.vercel.app/)
@@ -7,7 +8,7 @@ For the purposes of this hackathon, we have also included instructions for hosti
 
 # Local Hosting
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+This application is runs on node.js, and as such can be locally hosted for testing purposes.
 
 ## Installation
 
@@ -47,3 +48,35 @@ Ensure that your terminal is opened in the <code>Starthack</code> folder before 
 It is possible that some packages are out of date. In order to resolve this, run the following command in your terminal: <code>npm audit fix --force</code>
 </li>
 </ol>
+
+# Guide
+
+This project consists of a landing page and a main app page. The landing page features content regarding the application and what it offers, along with our goals for the future. Once you have explored the landing page, head to the login tab to open your portfolio.
+
+> If this is your first time using this application, please create an account by clicking the link at the bottom of the login page
+
+## Portfolio
+
+The portfolio displays your available balance and portfolio value, along with the status of your investments to allow you to easily track the performance of the companies you've entrusted your money to.
+
+## Explore
+
+The explore page features a list of the top 100 ESG scored companies, allowing you to search for a specific one by company code.
+
+## Settings
+
+TBC
+
+
+# API v1
+
+This application comes with a few callable API's that can be used to obtain information regarding your own account, or to retrieve basic company details.
+
+## Account  <code>/api/v1/accounts/me</code>
+This endpoint requires a user to enter there authorization token. To retrieve this, head to your Profile page by clicking your username and copy the provided user ID.
+
+## Company <code>/api/v1/company</code>
+This endpoint is a query endpoint, and requires the user to provide a **name** query when parsing the request. This query can either be in the form of a company code, or simply writing **all** to receive all available information.
+
+> Example query : /api/v1/company?name=KER.PA
+
