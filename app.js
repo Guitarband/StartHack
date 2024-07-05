@@ -155,14 +155,119 @@ app.get('/user', async (req, res) => {
   try {
     const accountId = req.headers['authorization'];
     await client.connect();
-    console.log(accountId)
-    console.log(typeof accountId)
     const userData = await data.findOne({_id: new ObjectId(accountId)})
     if(userData){
       res.json({
         username:userData.username,
         money:userData.money
       })
+    }
+    else{
+      res.status(401).json({error:'User not found'})
+    }
+  } finally {
+    await client.close()
+  }
+})
+
+app.get('/view', async (req, res) => {
+  const { id } = req.query;
+  if( companyArray.hasOwnProperty(id) ){
+    res.render('viewCompany', Object.assign({"cID":id},companyArray[id]))
+  }
+  else{
+    res.render('viewCompany', {
+      "cID": "Undefined",
+      "Name": "Undefined",
+      "Region": "Undefined",
+      "Country": "Undefined",
+      "Sector": "Undefined",
+      "Industry": "Undefined",
+      "ESG": "Undefined"
+    })
+  }
+})
+
+app.get('/buy', async (req, res) => {
+  const client = new MongoClient(uri, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    }
+  });
+  const { id, amount } = req.query;
+  const data = client.db('userData').collection('storedInfo')
+  try {
+    const accountId = req.cookies.userData;
+    await client.connect();
+    const userData = await data.findOne({_id: new ObjectId(accountId)})
+    if(userData){
+      let investments = userData.investments;
+      if(investments.hasOwnProperty(id)){
+        investments[id] = investments[id] + parseInt(amount)
+      }else{
+        investments[id] = parseInt(amount)
+      }
+      if((userData.money - amount) >= 0) {
+        await data.updateOne(
+            {_id: userData._id},
+            {$set: {investments:investments}}
+        )
+        await data.updateOne(
+            {_id: userData._id},
+            {$set: {money: parseInt(userData.money) - amount}}
+        )
+        res.status(200).json({response:`Successfully bought ${amount} shares of ${id}`})
+      }else{
+        res.json({error:'Not enough money'})
+      }
+    }
+    else{
+      res.status(401).json({error:'User not found'})
+    }
+  } finally {
+    await client.close()
+  }
+})
+
+app.get('/sell', async (req, res) => {
+  const client = new MongoClient(uri, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    }
+  });
+  const { id, amount } = req.query;
+  const data = client.db('userData').collection('storedInfo')
+  try {
+    const accountId = req.cookies.userData;
+    await client.connect();
+    const userData = await data.findOne({_id: new ObjectId(accountId)})
+    let investments = userData.investments;
+    if(userData){
+      if((investments[id] - amount) > 0) {
+        investments[id] = investments[id] - amount
+        await data.updateOne(
+            {_id: userData._id},
+            {$set: {investments:investments},}
+        )
+        await data.updateOne(
+            {_id: userData._id},
+            {$set: {money: parseInt(userData.money) + amount}}
+        )
+        res.status(200).json({response:`Successfully bought ${amount} shares of ${id}`})
+      }else if((investments[id] - amount) === 0){
+        investments.delete(id)
+        const updateUserData = await data.updateOne(
+            {_id: userData._id},
+            {$set: {investments}}
+        )
+      }else{
+        res.json({error:'Not enough money'})
+      }
+      res.render('viewCompany', companyArray[id])
     }
     else{
       res.status(401).json({error:'User not found'})
@@ -225,6 +330,7 @@ app.post('/confirmTransfer', async (req, res) => {
           {_id: new ObjectId(recipientId)},
           {$set: {money: newRecipientAmount}}
       )
+      res.render('portfolio')
     }
   } catch (error){
     console.log('An error occurred');

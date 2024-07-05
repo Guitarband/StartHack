@@ -7,13 +7,13 @@ html, body {
 }
 
 .app{
-  display: block;
-  justify-content: space-between;
+  display: flex;
   width: 100%;
   height: 100%;
 }
 
 .sidebar{
+  flex-grow: 1;
   position: fixed;
   top: 0;
   left: 0;
@@ -55,19 +55,24 @@ html, body {
 }
 
 .appContent{
-  position: fixed;
+  overflow: auto;
+  position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   width: 85vw;
-  padding: 30px;
   background-color: #114462;
   color: rgba(255,255,255,0.9);
 }
 
 .portfolioContent{
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 85vw;
   flex-grow: 7;
-  padding: 30px;
   background-color: #114462;
   color: rgba(255,255,255,0.9);
   display:grid;
@@ -75,22 +80,44 @@ html, body {
 }
 
 .exploreContent{
+  overflow: auto;
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   width: 85vw;
   flex-grow: 7;
-  overflow: auto;
   background-color: #114462;
   color: rgba(255,255,255,0.9);
+}
 
+#exploreTitle{
+  margin: 60px 60px 0 60px;
+}
+
+#exploreSearch{
+  grid-column: span 4;
+  margin: 20px 60px 40px 60px;
+}
+
+.exploreCards{
+  overflow: auto;
   display: grid;
   grid-template-columns: repeat(4,1fr);
 }
 
 .companyCards{
-  margin: 40px;
-  padding: 20px 20px 40px 20px;
-  background-color: #065388
+  margin: 20px;
+  padding: 20px 20px 5px 15px;
+  background-color: rgba(6,83,136,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+.companyName{
+  font-size: 10px;
+  bottom: 0;
 }

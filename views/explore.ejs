@@ -17,7 +17,12 @@
                 <button class="sidebarButton" type="button" onclick="location.href='/settings'">Settings</button>
                 <div class="footer"></div>
             </div>
-            <div class="exploreContent" id="exploreGrid"></div>
+            <div class="exploreContent">
+                <h1 id="exploreTitle">Explore</h1>
+                <div class="exploreCards" id="exploreGrid">
+                    <input type="text" placeholder="Search" id="exploreSearch">
+                </div>
+            </div>
         </div>
         <script>
             getCookie().then(result =>{

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Explore</title>
+    <link rel='stylesheet' href='/stylesheets/app.css' />
+    <script src="/javascripts/script.js"></script>
+</head>
+<body>
+<div class="app">
+    <div class="sidebar">
+        <div class="appLogo">
+
+        </div>
+        <button class="sidebarButton" id="name" type="button" onclick="location.href='/profile'">Name</button>
+        <button class="sidebarButton" type="button" onclick="location.href='/portfolio'">Portfolio</button>
+        <button class="sidebarButton" type="button" onclick="location.href='/explore'">Explore</button>
+        <button class="sidebarButton" type="button" onclick="location.href='/settings'">Settings</button>
+        <div class="footer"></div>
+    </div>
+    <div class="exploreContent">
+        <% if(Name !== undefined){ %>
+            <h1 id="companyID"><%= cID %></h1>
+            <h1><%= Name %></h1>
+            <p><%= Region %>, <%= Country %></p>
+            <p><%= Sector %>, <%= Industry %></p>
+            <button onclick="buyStock(document.getElementById('companyID').innerText, 10)">Buy</button>
+            <button>Sell</button>
+        <% } else{%>
+            <h1>Undefined</h1>
+            <p>Undefined</p>
+            <p>Undefined</p>
+        <%}%>
+    </div>
+</div>
+<script>
+    getCookie().then(result =>{
+        getUser(result)
+    })
+</script>
+</body>
+</html>

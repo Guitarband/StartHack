@@ -5,7 +5,7 @@
     "Country": "Netherlands",
     "Sector": "Electronic Technology",
     "Industry": "Semiconductors",
-    "ESG-Score": "73.13"
+    "ESG": "73.13"
   },
   "CHKP": {
     "Name": "Check Point Software Technologies",
@@ -13,7 +13,7 @@
     "Country": "Israel",
     "Sector": "Technology Services",
     "Industry": "Internet Software/Services",
-    "ESG-Score": "72.64"
+    "ESG": "72.64"
   },
   "RMS.PA": {
     "Name": "Hermes International SCA",
@@ -21,7 +21,7 @@
     "Country": "France",
     "Sector": "Consumer Non-Durables",
     "Industry": "Apparel/Footwear",
-    "ESG-Score": "71.71"
+    "ESG": "71.71"
   },
   "LIN": {
     "Name": "Linde",
@@ -29,7 +29,7 @@
     "Country": "United Kingdom",
     "Sector": "Process Industries",
     "Industry": "Chemicals: Specialty",
-    "ESG-Score": "71.26"
+    "ESG": "71.26"
   },
   "KNEBV.HE": {
     "Name": "Kone Oyj",
@@ -37,7 +37,7 @@
     "Country": "Finland",
     "Sector": "Producer Manufacturing",
     "Industry": "Building Products",
-    "ESG-Score": "70.37"
+    "ESG": "70.37"
   },
   "4507.T": {
     "Name": "Shionogi & Co.",
@@ -45,7 +45,7 @@
     "Country": "Japan",
     "Sector": "Health Technology",
     "Industry": "Pharmaceuticals: Major",
-    "ESG-Score": "70.04"
+    "ESG": "70.04"
   },
   "AMAT": {
     "Name": "Applied Materials, Inc.",
@@ -53,7 +53,7 @@
     "Country": "United States",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Machinery",
-    "ESG-Score": "69.77"
+    "ESG": "69.77"
   },
   "BEI.DE": {
     "Name": "Beiersdorf AG",
@@ -61,7 +61,7 @@
     "Country": "Germany",
     "Sector": "Consumer Non-Durables",
     "Industry": "Household/Personal Care",
-    "ESG-Score": "69.70"
+    "ESG": "69.70"
   },
   "CL": {
     "Name": "Colgate-Palmolive Company",
@@ -69,7 +69,7 @@
     "Country": "United States",
     "Sector": "Consumer Non-Durables",
     "Industry": "Household/Personal Care",
-    "ESG-Score": "69.32"
+    "ESG": "69.32"
   },
   "OR.PA": {
     "Name": "L'Oreal S.A.",
@@ -77,7 +77,7 @@
     "Country": "France",
     "Sector": "Consumer Non-Durables",
     "Industry": "Household/Personal Care",
-    "ESG-Score": "69.30"
+    "ESG": "69.30"
   },
   "CLPHF": {
     "Name": "CLP Holdings Limited",
@@ -85,7 +85,7 @@
     "Country": "Hong Kong",
     "Sector": "Utilities",
     "Industry": "Electric Utilities",
-    "ESG-Score": "68.74"
+    "ESG": "68.74"
   },
   "8113.T": {
     "Name": "Unicharm Corporation",
@@ -93,7 +93,7 @@
     "Country": "Japan",
     "Sector": "Consumer Non-Durables",
     "Industry": "Household/Personal Care",
-    "ESG-Score": "68.69"
+    "ESG": "68.69"
   },
   "ATCO-A.ST": {
     "Name": "Atlas Copco",
@@ -101,7 +101,7 @@
     "Country": "Sweden",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Machinery",
-    "ESG-Score": "68.67"
+    "ESG": "68.67"
   },
   "FTNT": {
     "Name": "Fortinet, Inc.",
@@ -109,7 +109,7 @@
     "Country": "United States",
     "Sector": "Electronic Technology",
     "Industry": "Computer Communications",
-    "ESG-Score": "68.49"
+    "ESG": "68.49"
   },
   "XYL": {
     "Name": "Xylem Inc.",
@@ -117,7 +117,7 @@
     "Country": "United States",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Machinery",
-    "ESG-Score": "68.48"
+    "ESG": "68.48"
   },
   "ABBN.SW.": {
     "Name": "ABB Ltd.",
@@ -125,7 +125,7 @@
     "Country": "Switzerland",
     "Sector": "Producer Manufacturing",
     "Industry": "Electrical Products",
-    "ESG-Score": "68.46"
+    "ESG": "68.46"
   },
   "0388.HK": {
     "Name": "Hong Kong Exchanges & Clearing Ltd.",
@@ -133,7 +133,7 @@
     "Country": "Hong Kong",
     "Sector": "Finance",
     "Industry": "Investment Banks/Brokers",
-    "ESG-Score": "68.27"
+    "ESG": "68.27"
   },
   "CNQ.TO": {
     "Name": "Canadian Natural Resources Limited",
@@ -141,7 +141,7 @@
     "Country": "Canada",
     "Sector": "Energy Minerals",
     "Industry": "Oil & Gas Production",
-    "ESG-Score": "68.16"
+    "ESG": "68.16"
   },
   "GBERY": {
     "Name": "Geberit AG",
@@ -149,7 +149,7 @@
     "Country": "Switzerland",
     "Sector": "Producer Manufacturing",
     "Industry": "Building Products",
-    "ESG-Score": "68.07"
+    "ESG": "68.07"
   },
   "EW": {
     "Name": "Edwards Lifesciences Corporation",
@@ -157,7 +157,7 @@
     "Country": "United States",
     "Sector": "Health Technology",
     "Industry": "Medical Specialties",
-    "ESG-Score": "68.02"
+    "ESG": "68.02"
   },
   "WY": {
     "Name": "Weyerhaeuser Company",
@@ -165,7 +165,7 @@
     "Country": "United States",
     "Sector": "Finance",
     "Industry": "Real Estate Investment Trusts",
-    "ESG-Score": "67.90"
+    "ESG": "67.90"
   },
   "MONDY": {
     "Name": "Mondi plc",
@@ -173,7 +173,7 @@
     "Country": "United Kingdom",
     "Sector": "Process Industries",
     "Industry": "Containers/Packaging",
-    "ESG-Score": "67.83"
+    "ESG": "67.83"
   },
   "GELYF": {
     "Name": "Geely Automobile Holdings Limited",
@@ -181,7 +181,7 @@
     "Country": "Hong Kong",
     "Sector": "Consumer Durables",
     "Industry": "Motor Vehicles",
-    "ESG-Score": "67.77"
+    "ESG": "67.77"
   },
   "CGNX": {
     "Name": "Cognex Corporation",
@@ -189,7 +189,7 @@
     "Country": "United States",
     "Sector": "Electronic Technology",
     "Industry": "Electronic Equipment/Instruments",
-    "ESG-Score": "67.63"
+    "ESG": "67.63"
   },
   "KAO.BE": {
     "Name": "Kao Corp.",
@@ -197,7 +197,7 @@
     "Country": "Japan",
     "Sector": "Consumer Non-Durables",
     "Industry": "Household/Personal Care",
-    "ESG-Score": "67.61"
+    "ESG": "67.61"
   },
   "LOGI": {
     "Name": "Logitech International S.A.",
@@ -205,7 +205,7 @@
     "Country": "Switzerland",
     "Sector": "Electronic Technology",
     "Industry": "Computer Peripherals",
-    "ESG-Score": "67.58"
+    "ESG": "67.58"
   },
   "VER.VI": {
     "Name": "VERBUND AG",
@@ -213,7 +213,7 @@
     "Country": "Austria",
     "Sector": "Utilities",
     "Industry": "Electric Utilities",
-    "ESG-Score": "67.48"
+    "ESG": "67.48"
   },
   "1211.HK": {
     "Name": "BYD Company",
@@ -221,7 +221,7 @@
     "Country": "China",
     "Sector": "Consumer Durables",
     "Industry": "Motor Vehicles",
-    "ESG-Score": "67.34"
+    "ESG": "67.34"
   },
   "GMGSF": {
     "Name": "Goodman Group",
@@ -229,7 +229,7 @@
     "Country": "Australia",
     "Sector": "Finance",
     "Industry": "Real Estate Investment Trusts",
-    "ESG-Score": "67.34"
+    "ESG": "67.34"
   },
   "LNNGY": {
     "Name": "Li Ning Company Limited",
@@ -237,7 +237,7 @@
     "Country": "China",
     "Sector": "Consumer Non-Durables",
     "Industry": "Apparel/Footwear",
-    "ESG-Score": "67.34"
+    "ESG": "67.34"
   },
   "TXN": {
     "Name": "Texas Instruments Incorporated",
@@ -245,7 +245,7 @@
     "Country": "United States",
     "Sector": "Electronic Technology",
     "Industry": "Semiconductors",
-    "ESG-Score": "67.27"
+    "ESG": "67.27"
   },
   "MRO": {
     "Name": "Marathon Oil Corporation",
@@ -253,7 +253,7 @@
     "Country": "United States",
     "Sector": "Energy Minerals",
     "Industry": "Oil & Gas Production",
-    "ESG-Score": "67.26"
+    "ESG": "67.26"
   },
   "6645.T": {
     "Name": "OMRON Corporation",
@@ -261,7 +261,7 @@
     "Country": "Japan",
     "Sector": "Electronic Technology",
     "Industry": "Electronic Equipment/Instruments",
-    "ESG-Score": "67.19"
+    "ESG": "67.19"
   },
   "8035.T": {
     "Name": "Tokyo Electron Ltd.",
@@ -269,7 +269,7 @@
     "Country": "Japan",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Machinery",
-    "ESG-Score": "67.16"
+    "ESG": "67.16"
   },
   "KEYS": {
     "Name": "Keysight Technologies Inc",
@@ -277,7 +277,7 @@
     "Country": "United States",
     "Sector": "Electronic Technology",
     "Industry": "Electronic Equipment/Instruments",
-    "ESG-Score": "67.05"
+    "ESG": "67.05"
   },
   "KESKOB.HE": {
     "Name": "Kesko Corporation",
@@ -285,7 +285,7 @@
     "Country": "Finland",
     "Sector": "Retail Trade",
     "Industry": "Food Retail",
-    "ESG-Score": "66.96"
+    "ESG": "66.96"
   },
   "4911.T": {
     "Name": "Shiseido Company,Limited",
@@ -293,7 +293,7 @@
     "Country": "Japan",
     "Sector": "Consumer Non-Durables",
     "Industry": "Household/Personal Care",
-    "ESG-Score": "66.77"
+    "ESG": "66.77"
   },
   "KNIN.SW": {
     "Name": "Kuehne & Nagel International AG",
@@ -301,7 +301,7 @@
     "Country": "Switzerland",
     "Sector": "Transportation",
     "Industry": "Marine Shipping",
-    "ESG-Score": "66.76"
+    "ESG": "66.76"
   },
   "FCX": {
     "Name": "Freeport-McMoRan, Inc.",
@@ -309,7 +309,7 @@
     "Country": "United States",
     "Sector": "Non-Energy Minerals",
     "Industry": "Other Metals/Minerals",
-    "ESG-Score": "66.74"
+    "ESG": "66.74"
   },
   "CNI": {
     "Name": "Canadian National Railway Company",
@@ -317,7 +317,7 @@
     "Country": "Canada",
     "Sector": "Transportation",
     "Industry": "Railroads",
-    "ESG-Score": "66.63"
+    "ESG": "66.63"
   },
   "UHR.SW": {
     "Name": "Swatch Group Ltd.",
@@ -325,7 +325,7 @@
     "Country": "Switzerland",
     "Sector": "Consumer Durables",
     "Industry": "Other Consumer Specialties",
-    "ESG-Score": "66.63"
+    "ESG": "66.63"
   },
   "SCHN.SW": {
     "Name": "Schindler Holding AG",
@@ -333,7 +333,7 @@
     "Country": "Switzerland",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Machinery",
-    "ESG-Score": "66.53"
+    "ESG": "66.53"
   },
   "6971.T": {
     "Name": "Kyocera Corporation",
@@ -341,7 +341,7 @@
     "Country": "Japan",
     "Sector": "Electronic Technology",
     "Industry": "Electronic Equipment/Instruments",
-    "ESG-Score": "66.48"
+    "ESG": "66.48"
   },
   "WSM": {
     "Name": "Williams-Sonoma, Inc.",
@@ -349,7 +349,7 @@
     "Country": "United States",
     "Sector": "Retail Trade",
     "Industry": "Specialty Stores",
-    "ESG-Score": "66.38"
+    "ESG": "66.38"
   },
   "ANET": {
     "Name": "Arista Networks, Inc.",
@@ -357,7 +357,7 @@
     "Country": "United States",
     "Sector": "Electronic Technology",
     "Industry": "Computer Peripherals",
-    "ESG-Score": "66.36"
+    "ESG": "66.36"
   },
   "REMYY": {
     "Name": "Remy Cointreau SA",
@@ -365,7 +365,7 @@
     "Country": "France",
     "Sector": "Consumer Non-Durables",
     "Industry": "Beverages: Alcoholic",
-    "ESG-Score": "66.30"
+    "ESG": "66.30"
   },
   "NEM": {
     "Name": "Newmont Corporation",
@@ -373,7 +373,7 @@
     "Country": "United States",
     "Sector": "Non-Energy Minerals",
     "Industry": "Precious Metals",
-    "ESG-Score": "66.25"
+    "ESG": "66.25"
   },
   "CPKC": {
     "Name": "Canadian Pacific Railway Limited",
@@ -381,7 +381,7 @@
     "Country": "Canada",
     "Sector": "Transportation",
     "Industry": "Railroads",
-    "ESG-Score": "66.19"
+    "ESG": "66.19"
   },
   "PSX": {
     "Name": "Phillips 66",
@@ -389,7 +389,7 @@
     "Country": "United States",
     "Sector": "Energy Minerals",
     "Industry": "Oil Refining/Marketing",
-    "ESG-Score": "66.19"
+    "ESG": "66.19"
   },
   "0066.HK": {
     "Name": "MTR Corporation Limited",
@@ -397,7 +397,7 @@
     "Country": "Hong Kong",
     "Sector": "Transportation",
     "Industry": "Other Transportation",
-    "ESG-Score": "66.13"
+    "ESG": "66.13"
   },
   "6981.T": {
     "Name": "Murata Manufacturing Co., Ltd.",
@@ -405,7 +405,7 @@
     "Country": "Japan",
     "Sector": "Electronic Technology",
     "Industry": "Electronic Production Equipment",
-    "ESG-Score": "66.08"
+    "ESG": "66.08"
   },
   "CDNS": {
     "Name": "Cadence Design Systems, Inc.",
@@ -413,7 +413,7 @@
     "Country": "United States",
     "Sector": "Technology Services",
     "Industry": "Packaged Software",
-    "ESG-Score": "65.97"
+    "ESG": "65.97"
   },
   "CSCO": {
     "Name": "Cisco Systems, Inc.",
@@ -421,7 +421,7 @@
     "Country": "United States",
     "Sector": "Electronic Technology",
     "Industry": "Telecommunications Equipment",
-    "ESG-Score": "65.97"
+    "ESG": "65.97"
   },
   "090435.KS": {
     "Name": "Amorepacific Corp.",
@@ -429,7 +429,7 @@
     "Country": "Korea, Republic of",
     "Sector": "Consumer Non-Durables",
     "Industry": "Household/Personal Care",
-    "ESG-Score": "65.94"
+    "ESG": "65.94"
   },
   "TCL.AX": {
     "Name": "Transurban Group Ltd.",
@@ -437,7 +437,7 @@
     "Country": "Australia",
     "Sector": "Transportation",
     "Industry": "Other Transportation",
-    "ESG-Score": "65.81"
+    "ESG": "65.81"
   },
   "SHNWF": {
     "Name": "Schroders PLC",
@@ -445,7 +445,7 @@
     "Country": "United Kingdom",
     "Sector": "Finance",
     "Industry": "Investment Managers",
-    "ESG-Score": "65.67"
+    "ESG": "65.67"
   },
   "2801.T": {
     "Name": "Kikkoman Corporation",
@@ -453,7 +453,7 @@
     "Country": "Japan",
     "Sector": "Consumer Non-Durables",
     "Industry": "Food: Specialty/Candy",
-    "ESG-Score": "65.65"
+    "ESG": "65.65"
   },
   "VWSB.DE": {
     "Name": "Vestas Wind Systems A/S",
@@ -461,7 +461,7 @@
     "Country": "Denmark",
     "Sector": "Producer Manufacturing",
     "Industry": "Electrical Products",
-    "ESG-Score": "65.65"
+    "ESG": "65.65"
   },
   "RHI": {
     "Name": "Robert Half International Inc.",
@@ -469,7 +469,7 @@
     "Country": "United States",
     "Sector": "Commercial Services",
     "Industry": "Personnel Services",
-    "ESG-Score": "65.44"
+    "ESG": "65.44"
   },
   "IHG": {
     "Name": "InterContinental Hotels Group PLC",
@@ -477,7 +477,7 @@
     "Country": "United Kingdom",
     "Sector": "Consumer Services",
     "Industry": "Hotels/Resorts/Cruise lines",
-    "ESG-Score": "65.30"
+    "ESG": "65.30"
   },
   "HAS": {
     "Name": "Hasbro, Inc.",
@@ -485,7 +485,7 @@
     "Country": "United States",
     "Sector": "Consumer Durables",
     "Industry": "Recreational Products",
-    "ESG-Score": "65.28"
+    "ESG": "65.28"
   },
   "NVDA": {
     "Name": "NVIDIA Corporation",
@@ -493,7 +493,7 @@
     "Country": "United States",
     "Sector": "Electronic Technology",
     "Industry": "Semiconductors",
-    "ESG-Score": "65.25"
+    "ESG": "65.25"
   },
   "COL.AX": {
     "Name": "Coles Group Ltd.",
@@ -501,7 +501,7 @@
     "Country": "Australia",
     "Sector": "Retail Trade",
     "Industry": "Food Retail",
-    "ESG-Score": "65.18"
+    "ESG": "65.18"
   },
   "ZS4.SI": {
     "Name": "Singapore Telecommunications Limited",
@@ -509,7 +509,7 @@
     "Country": "Singapore",
     "Sector": "Communications",
     "Industry": "Major Telecommunications",
-    "ESG-Score": "65.15"
+    "ESG": "65.15"
   },
   "WPM": {
     "Name": "Wheaton Precious Metals Corp",
@@ -517,7 +517,7 @@
     "Country": "Canada",
     "Sector": "Non-Energy Minerals",
     "Industry": "Precious Metals",
-    "ESG-Score": "65.13"
+    "ESG": "65.13"
   },
   "6988.T": {
     "Name": "Nitto Denko Corp.",
@@ -525,7 +525,7 @@
     "Country": "Japan",
     "Sector": "Electronic Technology",
     "Industry": "Electronic Equipment/Instruments",
-    "ESG-Score": "65.08"
+    "ESG": "65.08"
   },
   "RE21.DU": {
     "Name": "Red Electrica Corp. SA",
@@ -533,7 +533,7 @@
     "Country": "Spain",
     "Sector": "Industrial Services",
     "Industry": "Engineering & Construction",
-    "ESG-Score": "65.04"
+    "ESG": "65.04"
   },
   "SU.TO": {
     "Name": "Suncor Energy Inc.",
@@ -541,7 +541,7 @@
     "Country": "Canada",
     "Sector": "Energy Minerals",
     "Industry": "Integrated Oil",
-    "ESG-Score": "65.00"
+    "ESG": "65.00"
   },
   "GE": {
     "Name": "General Electric Company",
@@ -549,7 +549,7 @@
     "Country": "United States",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Machinery",
-    "ESG-Score": "64.96"
+    "ESG": "64.96"
   },
   "ASM.AS": {
     "Name": "ASM International N.V.",
@@ -557,7 +557,7 @@
     "Country": "Netherlands",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Machinery",
-    "ESG-Score": "64.96"
+    "ESG": "64.96"
   },
   "JRONY": {
     "Name": "Jeronimo Martins, SGPS S.A.",
@@ -565,7 +565,7 @@
     "Country": "Portugal",
     "Sector": "Retail Trade",
     "Industry": "Food Retail",
-    "ESG-Score": "64.84"
+    "ESG": "64.84"
   },
   "HES": {
     "Name": "Hess Corporation",
@@ -573,7 +573,7 @@
     "Country": "United States",
     "Sector": "Energy Minerals",
     "Industry": "Integrated Oil",
-    "ESG-Score": "64.84"
+    "ESG": "64.84"
   },
   "SGHHF": {
     "Name": "SG Holdings Co., Ltd.",
@@ -581,7 +581,7 @@
     "Country": "Japan",
     "Sector": "Transportation",
     "Industry": "Air Freight/Couriers",
-    "ESG-Score": "64.83"
+    "ESG": "64.83"
   },
   "7832.T": {
     "Name": "BANDAI NAMCO Holdings Inc.",
@@ -589,7 +589,7 @@
     "Country": "Japan",
     "Sector": "Consumer Durables",
     "Industry": "Recreational Products",
-    "ESG-Score": "64.77"
+    "ESG": "64.77"
   },
   "ATEYY": {
     "Name": "Advantest Corp.",
@@ -597,7 +597,7 @@
     "Country": "Japan",
     "Sector": "Electronic Technology",
     "Industry": "Electronic Equipment/Instruments",
-    "ESG-Score": "64.76"
+    "ESG": "64.76"
   },
   "RKT.L": {
     "Name": "Reckitt Benckiser Group plc",
@@ -605,7 +605,7 @@
     "Country": "United Kingdom",
     "Sector": "Consumer Non-Durables",
     "Industry": "Household/Personal Care",
-    "ESG-Score": "64.67"
+    "ESG": "64.67"
   },
   "NIBE-B.ST": {
     "Name": "NIBE Industrier AB",
@@ -613,7 +613,7 @@
     "Country": "Sweden",
     "Sector": "Consumer Durables",
     "Industry": "Electronics/Appliances",
-    "ESG-Score": "64.63"
+    "ESG": "64.63"
   },
   "YASKY": {
     "Name": "Yaskawa Electric Corporation",
@@ -621,7 +621,7 @@
     "Country": "Japan",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Machinery",
-    "ESG-Score": "64.49"
+    "ESG": "64.49"
   },
   "ASSA-B.ST": {
     "Name": "ASSA ABLOY AB",
@@ -629,7 +629,7 @@
     "Country": "Sweden",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Machinery",
-    "ESG-Score": "64.48"
+    "ESG": "64.48"
   },
   "HUBS": {
     "Name": "HubSpot, Inc.",
@@ -637,7 +637,7 @@
     "Country": "United States",
     "Sector": "Technology Services",
     "Industry": "Packaged Software",
-    "ESG-Score": "64.45"
+    "ESG": "64.45"
   },
   "SCA-B.ST": {
     "Name": "Svenska Cellulosa AB SCA",
@@ -645,7 +645,7 @@
     "Country": "Sweden",
     "Sector": "Process Industries",
     "Industry": "Pulp & Paper",
-    "ESG-Score": "64.44"
+    "ESG": "64.44"
   },
   "1LNB.SG": {
     "Name": "Spirax-Sarco Engineering PLC",
@@ -653,7 +653,7 @@
     "Country": "United Kingdom",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Machinery",
-    "ESG-Score": "64.43"
+    "ESG": "64.43"
   },
   "MUV2.MU": {
     "Name": "Munich Reinsurance Company",
@@ -661,7 +661,7 @@
     "Country": "Germany",
     "Sector": "Finance",
     "Industry": "Multi-Line Insurance",
-    "ESG-Score": "64.39"
+    "ESG": "64.39"
   },
   "KER.PA": {
     "Name": "Kering SA",
@@ -669,7 +669,7 @@
     "Country": "France",
     "Sector": "Consumer Non-Durables",
     "Industry": "Apparel/Footwear",
-    "ESG-Score": "64.37"
+    "ESG": "64.37"
   },
   "WOW.AX": {
     "Name": "Woolworths Group Ltd",
@@ -677,7 +677,7 @@
     "Country": "Australia",
     "Sector": "Retail Trade",
     "Industry": "Food Retail",
-    "ESG-Score": "64.36"
+    "ESG": "64.36"
   },
   "V": {
     "Name": "Visa Inc.",
@@ -685,7 +685,7 @@
     "Country": "United States",
     "Sector": "Commercial Services",
     "Industry": "Miscellaneous Commercial Services",
-    "ESG-Score": "64.36"
+    "ESG": "64.36"
   },
   "ALGN": {
     "Name": "Align Technology, Inc.",
@@ -693,7 +693,7 @@
     "Country": "United States",
     "Sector": "Health Technology",
     "Industry": "Medical Specialties",
-    "ESG-Score": "64.34"
+    "ESG": "64.34"
   },
   "NVZMY": {
     "Name": "Novozymes A/S",
@@ -701,7 +701,7 @@
     "Country": "Denmark",
     "Sector": "Process Industries",
     "Industry": "Chemicals: Specialty",
-    "ESG-Score": "64.32"
+    "ESG": "64.32"
   },
   "TT": {
     "Name": "Trane Technologies plc",
@@ -709,7 +709,7 @@
     "Country": "Ireland",
     "Sector": "Producer Manufacturing",
     "Industry": "Industrial Conglomerates",
-    "ESG-Score": "64.28"
+    "ESG": "64.28"
   },
   "JBHT": {
     "Name": "J.B. Hunt Transport Services, Inc.",
@@ -717,7 +717,7 @@
     "Country": "United States",
     "Sector": "Transportation",
     "Industry": "Trucking",
-    "ESG-Score": "64.27"
+    "ESG": "64.27"
   },
   "ADBE": {
     "Name": "Adobe Incorporated",
@@ -725,7 +725,7 @@
     "Country": "United States",
     "Sector": "Technology Services",
     "Industry": "Packaged Software",
-    "ESG-Score": "64.25"
+    "ESG": "64.25"
   },
   "SHW": {
     "Name": "Sherwin-Williams Company",
@@ -733,7 +733,7 @@
     "Country": "United States",
     "Sector": "Process Industries",
     "Industry": "Industrial Specialties",
-    "ESG-Score": "64.17"
+    "ESG": "64.17"
   },
   "SMPNY": {
     "Name": "Sompo Holdings,Inc.",
@@ -741,7 +741,7 @@
     "Country": "Japan",
     "Sector": "Finance",
     "Industry": "Property/Casualty Insurance",
-    "ESG-Score": "64.09"
+    "ESG": "64.09"
   },
   "CHJTF": {
     "Name": "CSPC Pharmaceutical Group Limited",
@@ -749,7 +749,7 @@
     "Country": "China",
     "Sector": "Health Technology",
     "Industry": "Pharmaceuticals: Major",
-    "ESG-Score": "63.98"
+    "ESG": "63.98"
   },
   "HOCPY": {
     "Name": "HOYA CORPORATION",
@@ -757,7 +757,7 @@
     "Country": "Japan",
     "Sector": "Health Technology",
     "Industry": "Medical Specialties",
-    "ESG-Score": "63.98"
+    "ESG": "63.98"
   },
   "IDEXY": {
     "Name": "Industria de Diseno Textil, S.A.",
@@ -765,7 +765,7 @@
     "Country": "Spain",
     "Sector": "Consumer Non-Durables",
     "Industry": "Apparel/Footwear",
-    "ESG-Score": "63.96"
+    "ESG": "63.96"
   },
   "SSMXY": {
     "Name": "Sysmex Corporation",
@@ -773,7 +773,7 @@
     "Country": "Japan",
     "Sector": "Health Technology",
     "Industry": "Medical Specialties",
-    "ESG-Score": "63.96"
+    "ESG": "63.96"
   },
   "TGOPY": {
     "Name": "3i Group plc",
@@ -781,7 +781,7 @@
     "Country": "United Kingdom",
     "Sector": "Finance",
     "Industry": "Investment Managers",
-    "ESG-Score": "63.93"
+    "ESG": "63.93"
   },
   "NESTE.HE": {
     "Name": "Neste Corporation",
@@ -789,7 +789,7 @@
     "Country": "Finland",
     "Sector": "Energy Minerals",
     "Industry": "Oil Refining/Marketing",
-    "ESG-Score": "63.93"
+    "ESG": "63.93"
   },
   "PEG": {
     "Name": "Public Service Enterprise Group Inc",
@@ -797,7 +797,7 @@
     "Country": "United States",
     "Sector": "Utilities",
     "Industry": "Electric Utilities",
-    "ESG-Score": "63.91"
+    "ESG": "63.91"
   }
 }
 
