@@ -22,6 +22,21 @@ function getUser(userId){
     })
 }
 
+function getBalance(userId){
+    fetch(`/user`, {
+        method:'GET',
+        headers:{
+            'Authorization': userId
+        }
+    }).then(response => {
+        return response.json()
+    }).then( data => {
+        document.getElementById('money').innerText = data.money;
+    }).catch(error => {
+        console.error(`Error retrieving UserInfo: ${error}`)
+    })
+}
+
 function fetchCompanyData(query){
     return fetch(`/api/v1/company?name=${query}`).then(response => {
         return response.json()
