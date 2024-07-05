@@ -159,7 +159,8 @@ app.get('/user', async (req, res) => {
     if(userData){
       res.json({
         username:userData.username,
-        money:userData.money
+        money:userData.money,
+        investments:userData.investments
       })
     }
     else{
