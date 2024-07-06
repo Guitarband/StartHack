@@ -1,7 +1,7 @@
 
 # Welcome to our StartHack Project
 
-Welcome to our starthack repository. This project follows the **Fintech** branch and is an *express.js* application hosted at [Starthack Project.](https://start-hack.vercel.app/)
+Welcome to our starthack repository. This project follows the **Fintech** branch and is an **express.js** application hosted at [Starthack Project.](https://start-hack.vercel.app/)
 
 For the purposes of this hackathon, we have also included instructions for hosting this application locally in order to examine and test its features and functionality
 
@@ -79,4 +79,3 @@ This endpoint requires a user to enter there authorization token. To retrieve th
 This endpoint is a query endpoint, and requires the user to provide a **name** query when parsing the request. This query can either be in the form of a company code, or simply writing **all** to receive all available information.
 
 > Example query : /api/v1/company?name=KER.PA
-
