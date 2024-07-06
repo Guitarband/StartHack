@@ -158,6 +158,7 @@ app.get('/user', async (req, res) => {
     const userData = await data.findOne({_id: new ObjectId(accountId)})
     if(userData){
       res.json({
+        id:userData._id,
         username:userData.username,
         money:userData.money,
         investments:userData.investments
@@ -346,7 +347,7 @@ app.get('/qrcode/:userId', async (req, res) => {
     const parsedUrl = new URL(req.headers['authorization'])
     const baseUrl = `${parsedUrl.protocol}//${parsedUrl.host}`
     const qrCodeUrl = await QRCode.toDataURL(`${baseUrl}/transfer?recipient=${userId}`);
-    res.json( { qrCodeUrl });
+    res.json( { qrCodeUrl, shareURL:`${baseUrl}/transfer?recipient=${userId}` });
   } catch (err) {
     console.error('Error generating QR code:', err);
     res.status(500).send('Error generating QR code');

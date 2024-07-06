@@ -32,8 +32,13 @@ function populatePortfolio(elements){
             const codeText = document.createTextNode(key)
             code.classList.add('companyCode')
             code.appendChild(codeText)
+            const amount = document.createElement('p')
+            const amountText = document.createTextNode(elements[key])
+            amount.classList.add('companyAmount')
+            amount.appendChild(amountText)
 
             mainDiv.appendChild(code)
+            mainDiv.appendChild(amount)
             document.getElementById('portfolioGrid').appendChild(mainDiv)
         }
     }

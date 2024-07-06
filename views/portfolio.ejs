@@ -18,10 +18,18 @@
                 <div class="footer"></div>
             </div>
             <div class="portfolioContent">
-                <p>Company name</p>
-                <p>Amount Invested</p>
-                <p>Return On Investment</p>
-                <p>Variance</p>
+                <h1 id="portfolioTitle">Overview</h1>
+                <div id="funds">
+                    <div>
+                        <p>Portfolio Value</p>
+                        <p id="portfolioValue">$0.00</p>
+                    </div>
+                    <div>
+                        <p>Available Funds</p>
+                        <p id="availableFunds"></p>
+                    </div>
+                </div>
+                <h1 id="portfolioGridTitle">Your Investments:</h1>
                 <div id="portfolioGrid"></div>
             </div>
 
@@ -29,7 +37,7 @@
         <script>
             getCookie().then(result =>{
                 getUser(result).then(response => {
-                    console.log(response.investments)
+                    document.getElementById('availableFunds').innerText = "$" + response.money
                     populatePortfolio(response.investments)
                 })
             })

@@ -18,23 +18,33 @@
                 <div class="footer"></div>
             </div>
             <div class="appContent">
-                <img id="qrcode" />
-                <div id="qrlink"></div>
-                <button onclick="getCookie().then(
-                    async result => await fetch(`/qrcode/${result}`,{
-                        method:'GET',
-                        headers:{
-                            'Authorization':`${window.location.href}`
-                        }
-                    }).then(response => response.json()).then(
-                        data => {
-                            document.getElementById('qrcode').src = data.qrCodeUrl;
-                        }))">Generate Qr Share Code</button>
+                <h1 id="accountTitle">Account</h1>
+                <h3 id="accountID">Account Id:</h3>
+                <div style="display: flex">
+                    <img id="qrcode" />
+                    <div id="qrcontent">
+                        <h2>Share this qr code to others to receive money transfers</h2>
+                        <h2 id="qrlink" onclick="navigator.clipboard.writeText(url)">Or click here to copy the link</h2>
+                    </div>
+                </div>
             </div>
         </div>
         <script>
-            getCookie().then(result =>{
-                getUser(result)
+            let url = undefined
+            getCookie().then( async result =>{
+                getUser(result).then(response => {
+                    document.getElementById('accountID').innerText = "Account Id: " + response.id;
+                })
+                await fetch(`/qrcode/${result}`,{
+                    method:'GET',
+                    headers:{
+                        'Authorization':`${window.location.href}`
+                    }
+                }).then(response => response.json()).then(
+                    data => {
+                        document.getElementById('qrcode').src = data.qrCodeUrl;
+                        url = data.shareURL
+                    })
             })
         </script>
     </body>
