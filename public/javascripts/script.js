@@ -8,7 +8,7 @@ async function getCookie() {
 }
 
 function getUser(userId){
-    fetch(`/user`, {
+    return fetch(`/user`, {
         method:'GET',
         headers:{
             'Authorization': userId
@@ -17,24 +17,26 @@ function getUser(userId){
         return response.json()
     }).then( data => {
         document.getElementById('name').innerText = data.username;
+        return data
     }).catch(error => {
         console.error(`Error retrieving UserInfo: ${error}`)
     })
 }
 
-function getBalance(userId){
-    fetch(`/user`, {
-        method:'GET',
-        headers:{
-            'Authorization': userId
+function populatePortfolio(elements){
+    for(let key in elements){
+        if(elements.hasOwnProperty(key)) {
+            const mainDiv = document.createElement('div')
+            mainDiv.classList.add('companyCards')
+            const code = document.createElement('p')
+            const codeText = document.createTextNode(key)
+            code.classList.add('companyCode')
+            code.appendChild(codeText)
+
+            mainDiv.appendChild(code)
+            document.getElementById('portfolioGrid').appendChild(mainDiv)
         }
-    }).then(response => {
-        return response.json()
-    }).then( data => {
-        document.getElementById('money').innerText = data.money;
-    }).catch(error => {
-        console.error(`Error retrieving UserInfo: ${error}`)
-    })
+    }
 }
 
 function fetchCompanyData(query){

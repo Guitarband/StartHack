@@ -17,21 +17,21 @@
                 <button class="sidebarButton" type="button" onclick="location.href='/settings'">Settings</button>
                 <div class="footer"></div>
             </div>
-            <div class="appContent">
-                <h1>Portfolio</h1>
-                <p>Welcome to your Portfolio</p>
-                <p>current Investments:</p>
-            </div>
             <div class="portfolioContent">
                 <p>Company name</p>
                 <p>Amount Invested</p>
                 <p>Return On Investment</p>
                 <p>Variance</p>
+                <div id="portfolioGrid"></div>
             </div>
+
         </div>
         <script>
             getCookie().then(result =>{
-                getUser(result)
+                getUser(result).then(response => {
+                    console.log(response.investments)
+                    populatePortfolio(response.investments)
+                })
             })
         </script>
     </body>
