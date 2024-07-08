@@ -32,8 +32,8 @@
                 <h1><%= Name %></h1>
                 <p><%= Region %>, <%= Country %></p>
                 <p><%= Sector %>, <%= Industry %></p>
-                <button onclick="buyStock(document.getElementById('companyID').innerText, 10)">Buy</button>
-                <button>Sell</button>
+                <button onclick="buyStock(document.getElementById('companyID').innerText, 10)">Buy 10</button>
+                <button onclick="sellStock(document.getElementById('companyID').innerText, 10)">Sell 10</button>
             <% } else{%>
                 <h1>Undefined</h1>
                 <p>Undefined</p>
