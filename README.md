@@ -1,7 +1,7 @@
 
 # Welcome to our StartHack Project
 
-Welcome to our starthack repository. This project follows the **Fintech** branch and is an *express.js* application hosted at [Starthack Project.](https://start-hack.vercel.app/)
+Welcome to our starthack repository. This project follows the **Fintech** branch and is an **express.js** application hosted at [Starthack Project.](https://start-hack.vercel.app/)
 
 For the purposes of this hackathon, we have also included instructions for hosting this application locally in order to examine and test its features and functionality
 
@@ -25,7 +25,7 @@ To begin with, clone this repository and navigate to folder. Then right click on
 This project makes use of multiple external modules to ensure it can run effectively. In your terminal, write the code below to install these modules in your environment.
 
 ```bash
-npm i cookie-parser cors debug ejs express http-errors mongodb morgan qrcode vercel
+npm i cookie-parser cors debug ejs express express-openid-connect http-errors mongodb morgan qrcode vercel
 ```
 
 ### Starting the server
@@ -80,3 +80,7 @@ This endpoint is a query endpoint, and requires the user to provide a **name** q
 
 > Example query : /api/v1/company?name=KER.PA
 
+## Starthack Resources
+[Figma](https://www.figma.com/proto/pFNbDM74gc9PBrvCrXOfUD/StartHackFigma?node-id=2-2&t=CdYN8SIUFHwJtiZ1-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2)
+
+[Presentation](https://docs.google.com/presentation/d/13mzck8nvZU00G6x57ygHoGHpLyiNNkE5RBE0k9qeJJc/edit?usp=sharing)
