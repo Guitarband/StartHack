@@ -79,3 +79,7 @@ This endpoint requires a user to enter there authorization token. To retrieve th
 This endpoint is a query endpoint, and requires the user to provide a **name** query when parsing the request. This query can either be in the form of a company code, or simply writing **all** to receive all available information.
 
 > Example query : /api/v1/company?name=KER.PA
+
+## Starthack Resources
+[Figma](https://www.figma.com/design/pFNbDM74gc9PBrvCrXOfUD/StartHackFigma?node-id=0-1&t=QIvwmTcUq4scgTQ1-1)
+[Presentation](https://docs.google.com/presentation/d/13mzck8nvZU00G6x57ygHoGHpLyiNNkE5RBE0k9qeJJc/edit?usp=sharing)
