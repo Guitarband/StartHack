@@ -228,7 +228,7 @@ app.get('/buy', async (req, res) => {
   }
 })
 
-app.get('/sell', async (req, res) => {
+app.get('/sell', async (req, res) =>  {
   const client = new MongoClient(uri, {
     serverApi: {
       version: ServerApiVersion.v1,
@@ -244,27 +244,27 @@ app.get('/sell', async (req, res) => {
     const userData = await data.findOne({_id: new ObjectId(accountId)})
     let investments = userData.investments;
     if(userData){
-      if((investments[id] - amount) > 0) {
-        investments[id] = investments[id] - amount
+      if((investments[id] - parseInt(amount)) > 0) {
+        investments[id] = investments[id] - parseInt(amount)
         await data.updateOne(
             {_id: userData._id},
             {$set: {investments:investments},}
         )
         await data.updateOne(
             {_id: userData._id},
-            {$set: {money: parseInt(userData.money) + amount}}
+            {$set: {money: parseInt(userData.money) + parseInt(amount)}}
         )
-        res.status(200).json({response:`Successfully bought ${amount} shares of ${id}`})
-      }else if((investments[id] - amount) === 0){
+        res.status(200).json({response:`Successfully sold ${amount} shares of ${id}`})
+      }else if((investments[id] - parseInt(amount)) === 0){
         investments.delete(id)
-        const updateUserData = await data.updateOne(
+        await data.updateOne(
             {_id: userData._id},
             {$set: {investments}}
         )
+        res.status(200).json({response:`Successfully sold ${amount} shares of ${id}`})
       }else{
         res.json({error:'Not enough money'})
       }
-      res.render('viewCompany', companyArray[id])
     }
     else{
       res.status(401).json({error:'User not found'})

@@ -88,7 +88,7 @@ function buyStock(id,amount){
 
 function sellStock(id,amount){
     fetch(`/sell?id=${id}&amount=${amount}`, {
-        method:'POST',
+        method:'GET',
     }).then(response => {
         return response.json()
     }).catch(error => {
