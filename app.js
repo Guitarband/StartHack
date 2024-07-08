@@ -7,16 +7,6 @@ const QRCode = require('qrcode');
 const cors = require('cors')
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = "mongodb+srv://preetishchoudhary:Nf8qAoPiEezmbDrB@starthackcluster.4tsfl13.mongodb.net/?appName=StartHackCluster";
-const { auth } = require('express-openid-connect');
-
-const authConfig = {
-  authRequired: false,
-  auth0Logout: true,
-  secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'https://start-hack-git-master-guitarbands-projects.vercel.app',
-  clientID: 'WdZznteWFux0cmyLdjqJEhLGLa5SWlzt',
-  issuerBaseURL: 'https://dev-pexkki148zgwoihg.au.auth0.com'
-};
 
 let app = express();
 
@@ -24,7 +14,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(cors())
-app.use(auth(authConfig));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -53,16 +42,6 @@ app.use('/profile', profileRouter);
 app.use('/portfolio', portfolioRouter);
 app.use('/explore', exploreRouter);
 app.use('/settings', settingsRouter);
-
-const {
-  loginRequest,
-  signupRequest
-} = require('./routes/clientDataHandler')
-
-
-app.get('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-});
 
 app.post('/login', async (req, res) => {
   const client = new MongoClient(uri, {
