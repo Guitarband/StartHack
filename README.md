@@ -81,5 +81,6 @@ This endpoint is a query endpoint, and requires the user to provide a **name** q
 > Example query : /api/v1/company?name=KER.PA
 
 ## Starthack Resources
-[Figma](https://www.figma.com/design/pFNbDM74gc9PBrvCrXOfUD/StartHackFigma?node-id=0-1&t=QIvwmTcUq4scgTQ1-1)
+[Figma](https://www.figma.com/proto/pFNbDM74gc9PBrvCrXOfUD/StartHackFigma?node-id=2-2&t=CdYN8SIUFHwJtiZ1-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2)
+
 [Presentation](https://docs.google.com/presentation/d/13mzck8nvZU00G6x57ygHoGHpLyiNNkE5RBE0k9qeJJc/edit?usp=sharing)
