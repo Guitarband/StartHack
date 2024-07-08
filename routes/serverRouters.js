@@ -2,7 +2,7 @@ let express = require('express');
 
 let landingRouter = express.Router();
 landingRouter.get('/', function(req, res, next) {
-    res.render('landing', { title: 'ProjectName' });
+    res.render('landing', { title: 'Landing' });
 });
 
 let aboutRouter = express.Router();

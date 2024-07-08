@@ -7,6 +7,7 @@ const QRCode = require('qrcode');
 const cors = require('cors')
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = "mongodb+srv://preetishchoudhary:Nf8qAoPiEezmbDrB@starthackcluster.4tsfl13.mongodb.net/?appName=StartHackCluster";
+const { auth, requiresAuth } = require('express-openid-connect');
 
 let app = express();
 
@@ -33,7 +34,17 @@ const {
 } = require('./routes/serverRouters')
 const companyArray = require('./data/companies.json')
 
-app.use('/', landingRouter);
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: '0a4d6b7e7c68f9b8a7342c4c1c6fd31e',
+  baseURL: 'https://start-hack-git-master-guitarbands-projects.vercel.app',
+  clientID: 'WdZznteWFux0cmyLdjqJEhLGLa5SWlzt',
+  issuerBaseURL: 'https://dev-pexkki148zgwoihg.au.auth0.com'
+};
+
+app.use(auth(config));
+app.use('/landing', landingRouter);
 app.use('/about', aboutRouter);
 app.use('/solutions', solutionsRouter);
 app.use('/login', loginRouter);
@@ -42,6 +53,52 @@ app.use('/profile', profileRouter);
 app.use('/portfolio', portfolioRouter);
 app.use('/explore', exploreRouter);
 app.use('/settings', settingsRouter);
+
+
+app.get('/', (req, res) => {
+  if(req.oidc.isAuthenticated()){
+    res.redirect('/checkUser')
+  }
+  else{
+    res.render('landing', { title: 'Landing' })
+  }
+});
+
+app.get('/checkUser', async (req, res) => {
+  const client = new MongoClient(uri, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    }
+  });
+  const data = client.db('userData').collection('storedInfo')
+  const username = req.oidc.user.nickname;
+  try{
+    await client.connect();
+    const userData = await data.findOne({username: username})
+    if (userData) {
+      res.cookie('userData', `${userData._id.toString()}`);
+      res.redirect(`/portfolio`)
+    } else {
+      let uid = await data.insertOne({
+        email: req.oidc.user.email,
+        first_name: req.oidc.user.given_name,
+        last_name: req.oidc.user.family_name,
+        picture: req.oidc.user.picture,
+        username: username,
+        money: 10000,
+        investments: {}
+      })
+      res.cookie('userData', `${uid.insertedId.toString()}`);
+      res.redirect(`/portfolio`)
+    }
+  } catch (error){
+    console.error(error)
+  }finally {
+    await client.close()
+  }
+})
 
 app.post('/login', async (req, res) => {
   const client = new MongoClient(uri, {
