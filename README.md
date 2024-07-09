@@ -1,7 +1,7 @@
 
 # Welcome to our StartHack Project
 
-Welcome to our starthack repository. This project follows the **Fintech** branch and is an **express.js** application hosted at [Starthack Project.](https://start-hack-git-master-guitarbands-projects.vercel.app/)
+Welcome to our Starthack repository. This project follows the **Fintech** branch and is an **express.js** application hosted at [Starthack Project.](https://start-hack-git-master-guitarbands-projects.vercel.app/)
 
 For the purposes of this hackathon, we have also included instructions for hosting this application locally in order to examine and test its features and functionality
 
