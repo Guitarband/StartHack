@@ -1,7 +1,7 @@
 
 # Welcome to our StartHack Project
 
-Welcome to our starthack repository. This project follows the **Fintech** branch and is an **express.js** application hosted at [Starthack Project.](https://start-hack.vercel.app/)
+Welcome to our starthack repository. This project follows the **Fintech** branch and is an **express.js** application hosted at [Starthack Project.](https://start-hack-git-master-guitarbands-projects.vercel.app/)
 
 For the purposes of this hackathon, we have also included instructions for hosting this application locally in order to examine and test its features and functionality
 
@@ -65,7 +65,7 @@ The explore page features a list of the top 100 ESG scored companies, allowing y
 
 ## Settings
 
-TBC
+This page will contain settings the user can change, such as ui colours, etc.
 
 
 # API v1

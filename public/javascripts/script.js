@@ -8,19 +8,23 @@ async function getCookie() {
 }
 
 function getUser(userId){
-    return fetch(`/user`, {
-        method:'GET',
-        headers:{
-            'Authorization': userId
-        }
-    }).then(response => {
-        return response.json()
-    }).then( data => {
-        document.getElementById('name').innerText = data.username;
-        return data
-    }).catch(error => {
-        console.error(`Error retrieving UserInfo: ${error}`)
-    })
+    if(userId === 'Cookie not found'){
+        location.href='/'
+    } else {
+        return fetch(`/user`, {
+            method: 'GET',
+            headers: {
+                'Authorization': userId
+            }
+        }).then(response => {
+            return response.json()
+        }).then(data => {
+            document.getElementById('name').innerText = data.username;
+            return data
+        }).catch(error => {
+            console.error(`Error retrieving UserInfo: ${error}`)
+        })
+    }
 }
 
 function populatePortfolio(elements){
@@ -39,7 +43,11 @@ function populatePortfolio(elements){
 
             mainDiv.appendChild(code)
             mainDiv.appendChild(amount)
+            mainDiv.onclick = function() {
+                location.href=`/view?id=${key}`
+            }
             document.getElementById('portfolioGrid').appendChild(mainDiv)
+            document.getElementById('portfolioValue').innerText = "$" + (elements[key] + parseFloat(document.getElementById('portfolioValue').innerText.substring(1)))
         }
     }
 }
@@ -71,6 +79,9 @@ function populateExplore(elements){
             mainDiv.appendChild(code)
             mainDiv.appendChild(esg)
             mainDiv.appendChild(name)
+            mainDiv.onclick = function() {
+                location.href=`/view?id=${key}`
+            }
             document.getElementById('exploreGrid').appendChild(mainDiv)
         }
     }

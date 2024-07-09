@@ -6,7 +6,7 @@ html, body {
   height: 100%;
 }
 
-button:hover, #qrlink:hover {
+button:hover, #qrlink:hover, .companyCards:hover {
   color: #858585;
   cursor: pointer;
   transition: font-size ease-in-out 200ms;
@@ -124,6 +124,7 @@ button:hover, #qrlink:hover {
 #portfolioGridTitle{
   margin: 60px 60px 0 60px;
 }
+
 #portfolioGrid{
   margin: 10px 60px 60px 40px;
 }

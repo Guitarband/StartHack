@@ -208,18 +208,19 @@ app.get('/user', async (req, res) => {
     const accountId = req.headers['authorization'];
     await client.connect();
     const userData = await data.findOne({_id: new ObjectId(accountId)})
-    if(userData){
+    if (userData) {
       res.json({
-        id:userData._id,
-        username:userData.username,
-        money:userData.money,
-        investments:userData.investments
+        id: userData._id,
+        username: userData.username,
+        money: userData.money,
+        investments: userData.investments
       })
+    } else {
+      res.status(401).json({error: 'User not found'})
     }
-    else{
-      res.status(401).json({error:'User not found'})
-    }
-  } finally {
+  } catch (error){
+    console.log(error)
+  }finally {
     await client.close()
   }
 })
